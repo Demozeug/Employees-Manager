@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <H1>Register Player</H1>
+   <form>
+   		Name: <input type="text" data-bind="value: registerRequest.name"><br />
+   		<input type="submit" value="Register" data-bind="click: register" ><br />
+   		<div data-bind="visible: registerResponse.json">
+   		Response: <textarea data-bind="value: registerResponse.json" readonly="readonly"></textarea>
+   		</div>
+   </form>
+
+   <H1>List Players</H1>
+   <form>
+   		<input type="submit" value="Register" data-bind="click: listPlayer" ><br />
+   		<div data-bind="visible: listPlayerResponse.json">
+   		Response: <textarea data-bind="value: listPlayerResponse.json" readonly="readonly"></textarea>
+   		</div>
+   </form>
+
+   <H1>Game create</H1>
+   <form>
+   		Player ID: <input type="text" data-bind="value: createGameRequest.playerid" ><br />
+   		<input type="submit" value="Create" data-bind="click: createGame" ><br />
+   		<div data-bind="visible: createGameResponse.json">
+   		Response: <textarea data-bind="value: createGameResponse.json" readonly="readonly"></textarea>
+   		</div>
+   </form>
+
+   <H1>Game show</H1>
+   <form>
+   		Game ID: <input type="text" data-bind="value: showGameRequest.gameid" ><br />
+   		<input type="submit" value="Show" data-bind="click: showGame" ><br />
+   		<div data-bind="visible: showGameResponse.json">
+   		Response: <textarea data-bind="value: showGameResponse.json" readonly="readonly"></textarea>
+   		</div>
+   </form>
+
+   <H1>Game join</H1>
+   <form>
+   		Game ID: <input type="text" data-bind="value: joinGameRequest.gameid" ><br />
+   		Player ID: <input type="text" data-bind="value: joinGameRequest.playerid" ><br />
+   		<input type="submit" value="Show" data-bind="click: joinGame" ><br />
+   		<div data-bind="visible: joinGameResponse.json">
+   		Response: <textarea data-bind="value: joinGameResponse.json" readonly="readonly"></textarea>
+   		</div>
+   </form>
+
+   <script data-main="js/main" src="js/libs/require.js"></script>
+</body>
+</html>
