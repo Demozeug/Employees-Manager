@@ -28,13 +28,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  })
-    .controller('ShowCtrl', function ($scope) {
-        $scope.employees = [
-            {name:'laura'},
-            {name:'andreas'},
-            {name:'salva'}
-        ];
+  });
 
 
-    });;
+
+

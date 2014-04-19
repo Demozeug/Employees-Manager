@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: ShowCtrl', function () {
+describe('Controller: ShowctrlCtrl', function () {
 
   // load the controller's module
   beforeEach(module('employeesJsApp'));
@@ -16,9 +16,7 @@ describe('Controller: ShowCtrl', function () {
     });
   }));
 
-  it('should exist', function () {
+  it('should attach a list of awesomeThings to the scope', function () {
     expect(ShowCtrl).toBeDefined();
   });
-
-
 });
