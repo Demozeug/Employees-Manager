@@ -22,10 +22,19 @@ angular
             controller: 'MainCtrl'
         })
         .when('/show', {
-            templateUrl: 'views/add.html',
+            templateUrl: 'views/show.html',
             controller: 'ShowCtrl'
         })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+    .controller('ShowCtrl', function ($scope) {
+        $scope.employees = [
+            {name:'laura'},
+            {name:'andreas'},
+            {name:'salva'}
+        ];
+
+
+    });;
