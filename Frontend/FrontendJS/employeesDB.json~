@@ -1,0 +1,12 @@
+﻿{"name":{"first":"John", "last": "Johnson"},
+"street":"Oslo West 555", 
+"age":33,
+"phone":"555 1234567",
+"skills":["C++","java","PL/SQL"]
+}
+{"name":{"first":"Mike", "last": "Patton"},
+"street":"Sunset Boulevard 55", 
+"age":53,
+"phone":"555 123237",
+"skills":["C++","PHP","jquery"]
+}

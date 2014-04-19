@@ -1,0 +1,42 @@
+MONGODB---------------------------------------------------------------
+
+To install mongo (on Windows) you can read this page:
+http://www.mkyong.com/mongodb/how-to-install-mongodb-on-windows/
+
+On Windows run the server
+run> mongod --config c:\mongodb\mongo.config
+
+To create the database you can run the following to import the collection by json script (not in the mongo shell):
+> mongoimport --db employeesDB --collection developers employeesDB.json
+
+Then run the mongo shell.
+>mongo
+
+Display list of databases:
+> show dbs
+local   0.078125GB
+test    0.203125GB
+employeesDB 0.203125GB
+
+> use employeesDB  (create a database if it doesn´t exist)
+switched to db employeeDB
+
+> show collections
+developers
+system.indexes
+
+In the mongo shell run the following to display the collection:
+
+> db.developers.find()
+
+the console will show something like:
+{ "_id" : ObjectId("53515d30eef621d221f85d9e"), "name" : { "first" : "John", "last" : "Johnson" }, "street" : "Park Avenue 555", "age" : 33, "phone" : "555 1234567", "skills" : [ "C++", "java", "PL/SQL" ] }
+{ "_id" : ObjectId("53515d30eef621d221f85d9f"), "name" : { "first" : "Mike", "last" : "Patton" }, "street" : "Sunset Boulevard 55", "age" : 53, "phone" : "555 123237", "skills" : [ "C++", "PHP", "jquery" ] }
+
+
+------------
+MONGOJS
+http://howtonode.org/node-js-and-mongodb-getting-started-with-mongojs
+http://docs.mongodb.org/ecosystem/drivers/node-js/
+
+
