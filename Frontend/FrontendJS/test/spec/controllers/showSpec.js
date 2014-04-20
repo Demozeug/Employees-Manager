@@ -93,7 +93,7 @@ describe('Controller: ShowCtrl', function () {
         httpBackend.flush();
 
         //verify results
-        expect(scope.employees).toBeUndefined();
+
         expect(scope.noLinkFoundMessage).toMatch(errorMessage);
 
     });
