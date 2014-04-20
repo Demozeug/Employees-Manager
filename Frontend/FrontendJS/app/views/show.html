@@ -14,26 +14,15 @@
 
     <div ng-controller="ShowCtrl">
         <ul>
+            TEST
             <li ng-repeat="employee in employees"> {{employee.name}}</li>
         </ul>
+{{}}
 
 
 
-        <p ng-show="reportListFailure" class="message failure">
-            {{reportListFailure}}
-        </p>
-        <table>
-            <tbody>
-            <tr ng-repeat="date in reportDates">
-                <td>{{date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
-                <td><a ng-href="{{getBaseUrl()}}/reports/{{customerName}}/{{date}}/matched">matched</a></td>
-                <td><a ng-href="{{getBaseUrl()}}/reports/{{customerName}}/{{date}}/unmatched/not-found">not found</a></td>
-                <td><a ng-href="{{getBaseUrl()}}/reports/{{customerName}}/{{date}}/unmatched/ambiguous">ambiguous</a></td>
-            </tr>
-            </tbody>
-        </table>
     </div>
-    </div>
+
 </div>
 <div class="footer">
     Released by Demozeug for learning purpose.

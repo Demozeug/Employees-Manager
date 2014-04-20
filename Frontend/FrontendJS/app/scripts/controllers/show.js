@@ -2,7 +2,7 @@
 
 angular.module('employeesJsApp')
     .constant('baseUrl', '/employees-manager/api/rest/')
-    .controller('ShowCtrl', function ($scope) {
+    .controller('ShowCtrl', ['$scope', 'searchService', 'baseUrl', function ($scope, searchService, baseUrl) {
 
         $scope.employees = [];
         $scope.noDataFoundMessage=undefined;
@@ -25,7 +25,8 @@ angular.module('employeesJsApp')
                     }
                     else {
                         $scope.noDataFoundMessage=data.message;
-                        $scope.employees = data;
+
+
                     }
                 })
                         .error(function(data) {
@@ -34,7 +35,7 @@ angular.module('employeesJsApp')
                         });
 
 
-    }})
+    }}])
 
 .service('searchService', ['$http', 'baseUrl', function ($http, baseUrl) {
     this.getEmployeesList = function() {
